@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zen Sparks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="startMenu" class="overlay active">
+    <div class="menu-card">
+      <h1>Zen Sparks</h1>
+      <p>Merge glowing sparks and gently shatter crystal shards.</p>
+      <button id="playBtn" class="primary">Play</button>
+    </div>
+    <canvas id="menuCanvas"></canvas>
+  </div>
+
+  <div id="gameUI" class="hidden">
+    <canvas id="gameCanvas"></canvas>
+
+    <header class="hud top-left glass">
+      <div class="stat"><span>Score</span><strong id="scoreValue">0</strong></div>
+      <div class="stat"><span>Sparks</span><strong id="sparkCountValue">0</strong></div>
+      <div class="stat"><span>Shards</span><strong id="shardCountValue">0</strong></div>
+    </header>
+
+    <aside class="hud right-panel glass">
+      <h2>Actions</h2>
+      <button id="spawnSparkBtn" class="primary">Spawn Spark <em id="spawnCostLabel">10</em></button>
+      <button id="mergeBtn">Merge Equal Sparks</button>
+
+      <h2>Upgrades</h2>
+      <div class="upgrade-list" id="upgradeList"></div>
+
+      <button id="resetBtn" class="danger">Reset Progress</button>
+    </aside>
+
+    <div id="floatingTextLayer"></div>
+  </div>
+
+  <div id="resetOverlay" class="overlay">
+    <div class="menu-card">
+      <h2>Session Ended</h2>
+      <p>Total score: <strong id="finalScoreValue">0</strong></p>
+      <p>Your save has been cleared.</p>
+      <button id="restartBtn" class="primary">Restart</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
